@@ -16,7 +16,7 @@ To create your React app go to the exer5 folder in CommandLine or Terminal and r
 
 To view your code, run `npm start` in CommandLine or Terminal in that folder. Right now you should be seeing a bunch of stuff that React has naturally displayed whenever you initialize a React app. You can ignore everything except `index.js` and `App.js`. The `index.js` file is what you are actually seeing when you run `npm start`, and there is only an App component being displayed. The code for what the App component displays is in `App.js`. In `App.js` you will display your frontend code.
 
-To get started, create a `server` and `components` folder within `src`. Inside the server folder you could include files like an `api.js` file that calls the Marta API. The call should return an array with each index stating all the information for each individual train somewhat like ([train1 data, train2 data, etc]). This data should be filtered after the call to only return all the train info for trains that are part of the *gold line*, so only `"LINE":"GOLD"`. When calling the Marta API, there are certain settings we want to include inside the async function to avoid issues. Those are listed below.
+To get started, create a `server` and `components` folder within `src`. Inside the server folder you could include files like an `trainsapi.js` file that calls the Marta API. The call should return an array with each index stating all the information for each individual train somewhat like ([train1 data, train2 data, etc]). This data should be filtered after the call to only return all the train info for trains that are part of the *gold line*, so only `"LINE":"GOLD"`. When calling the Marta API, there are certain settings we want to include inside the async function to avoid issues. Those are listed below.
 ```
 let requestSettings = {
         method: "get",
@@ -30,7 +30,7 @@ In the components folder, create a `Train.js` file. In this file you can create 
 
 Finally, in the `App.js` file display each of the train components. *Hint* You do not need to display each component manually as the number of trains on a line or subject to change. Instead you can use the `map` function you used in Exercise 4 and a lambda expression inside the App component to take in the props at each index and display a component for each train's props.
 
-Once you have reached this step, we will start the set you up for Exercise 6, we ask that you create a non-functional dropdown somewhere on the screen. (In Exercise 6 we will display information for each train line so the dropdown for each train line page will change). You can create a file called `lines.js` inside of the `server` folder that holds each of the train lines' stations. You can just copy this information and put it in that file: 
+Once you have reached this step, we will start the set you up for Exercise 6, we ask that you create a non-functional dropdown somewhere on the screen. (In Exercise 6 we will display information for each train line so the dropdown for each train line page will change). You can create a file called `stations.js` inside of the `server` folder that holds each of the train lines' stations. You can just copy this information and put it in that file: 
 ```
 stationsByLine = {
     red: ["North Springs", "Sandy Springs", "Dunwoody", "Medical Center", "Buckhead", "Lindbergh Center", "Arts Center", "Midtown", "North Avenue", "Civic Center", "Peachtree Center", "Five Points", "Garnett", "West End", "Oakland City", "Lakewood/Ft. McPherson", "East Point", "College Park", "Airport"],
@@ -39,7 +39,7 @@ stationsByLine = {
     green: ["Bankhead", "Ashby", "Vine City", "GWCC/CNN Center", "Five Points", "Georgia State", "King Memorial", "Inman Park", "Edgewood"]
 }
 ```
-We can create a `dropdown.js` file in `components`. This will contain an exportable dropdown display component, which we can show in `App.js`. The stations that will be displayed for this exercise are the values in `stationsByLine.gold` that we can get from the `lines.js` file and insert as props for the dropdown component in `App.js`.
+We can create a `dropdown.js` file in `components`. This will contain an exportable dropdown display component, which we can show in `App.js`. The stations that will be displayed for this exercise are the values in `stationsByLine.gold` that we can get from the `stations.js` file and insert as props for the dropdown component in `App.js`.
 
 Lastly, we want four nonfunctional buttons to be displayed titled 'Arriving', 'Scheduled', 'Northbound', and 'Southbound'. These buttons will become operational in Exercise 6.
 
