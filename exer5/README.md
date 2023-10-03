@@ -29,9 +29,9 @@ let requestSettings = {
 ```
 In the components folder, create a `Train.js` file. In this file you can create the design for an exportable Train component that takes in the data for one train and returns the display for it.
 
-Finally, in the `App.js` file display each of the train components. *Hint* You do not need to display each component manually as the number of trains on a line or subject to change. Instead you can use the `map` function you used in Exercise 4 and a lambda expression inside the App component to take in the props at each index and display a component for each train's props.
+Finally, in the `App.js` file display each of the train components. *Hint: You do not need to display each component manually as the number of trains on a line or subject to change.* Instead you can use the `map` function you used in Exercise 4 and a lambda expression inside the App component to take in the props at each index and display a component for each train's props.
 
-Once you have reached this step, we will start the set you up for Exercise 6, we ask that you create a non-functional dropdown somewhere on the screen. (In Exercise 6 we will display information for each train line so the dropdown for each train line page will change). You can create a file called `stations.js` inside of the `server` folder that holds each of the train lines' stations. You can just copy this information and put it in that file: 
+Once you have reached this step, we will start the setup for Exercise 6. We ask that you create a non-functional dropdown somewhere on the screen. (In Exercise 6 we will display information for each train line so the dropdown for each train line page will change). You can create a file called `stations.js` inside of the `server` folder that holds each of the train lines' stations. You can just copy this information and put it in that file: 
 ```
 stationsByLine = {
     red: ["North Springs", "Sandy Springs", "Dunwoody", "Medical Center", "Buckhead", "Lindbergh Center", "Arts Center", "Midtown", "North Avenue", "Civic Center", "Peachtree Center", "Five Points", "Garnett", "West End", "Oakland City", "Lakewood/Ft. McPherson", "East Point", "College Park", "Airport"],
@@ -45,7 +45,6 @@ We can create a `dropdown.js` file in `components`. This will contain an exporta
 Lastly, we want four nonfunctional buttons to be displayed titled 'Arriving', 'Scheduled', 'Northbound', and 'Southbound'. These buttons will become operational in Exercise 6.
 
 **Requirements:**
-- Only work on `App.js` file and additional files not included by React unless otherwise necessary.
 - In `src` create two folders: `server` and `components`.
 - Call the Marta API inside the `server` folder using this url and following the settings listed above: "https://developerservices.itsmarta.com:18096/railrealtimearrivals?apiKey=aa09b111-e99b-4a7c-83f7-8cb6ce8857f7"
 - Create a `Train.js` component inside the `components` folder that displays the information for each train 
