@@ -12,12 +12,12 @@ See the submission instructions down below.
 
 Simple instructions: We are creating a simple Marta Interface for the gold line. This exercise will be built upon in Exercise 6.
 
-Congrats on making it your first bootcamp React project!
-To create your React app go to the exer5 folder in CommandLine or Terminal and run `npx create-react-app marta-interface`. After it finishes installing dependencies, go ahead and do `cd marta-interface`; you are now in your React app!
+Congrats on making it to your first bootcamp React project!
+To create your React app go to the exer5 folder in command line or terminal and run `npx create-react-app marta-interface`. After it finishes installing dependencies, go ahead and run `cd marta-interface`; you are now in your React app!
 
-To view your code, run `npm start` in CommandLine or Terminal in that folder. Right now you should be seeing a bunch of stuff that React has naturally displayed whenever you initialize a React app. You can ignore everything except `index.js` and `App.js`. The `index.js` file is what you are actually seeing when you run `npm start`, and there is only an App component being displayed. The code for what the App component displays is in `App.js`. In `App.js` you will display your frontend code.
+To run your code locally, run `npm start` in command line or terminal in that folder. Right now you should be seeing a bunch of stuff that React has naturally displayed whenever you initialize a React app. You can ignore everything except `index.js` and `App.js`. The `index.js` file is what you are actually seeing when you run `npm start`, and there is only an App component being displayed. The code for what the App component displays is in `App.js`. In `App.js` you will display your frontend code.
 
-To get started, create a `server` and `components` folder within `src`. Inside the server folder you could include files like an `trainsapi.js` file that calls the Marta API. The call should return an array with each index stating all the information for each individual train somewhat like ([train1 data, train2 data, etc]). This data should be filtered after the call to only return all the train info for trains that are part of the *gold line*, so only `"LINE":"GOLD"`. When calling the Marta API, there are certain settings we want to include inside the async function to avoid issues. Those are listed below.
+To get started, create a `server` and `components` folder within `src`. Inside the server folder you could include files like an `trainsapi.js` file that calls the Marta API. The call should return an array with each index stating all the information for each individual train somewhat like ([train1 data, train2 data, etc]). This data should be filtered after the call to only return info for trains that are part of the *gold line* (i.e. only include objects with the property `"LINE":"GOLD"`). When calling the Marta API, there are certain settings we want to include inside the async function to avoid issues. Those are listed below.
 ```
 let requestSettings = {
         method: "get",
