@@ -9,6 +9,7 @@ See the submission instructions down below.
 
 ## Instructions
 *HIGHLY RECOMMEND READING THROUGH THE WHOLE README BEFORE BEGINNING*
+
 Simple instructions: We are creating a simple Marta Interface for the gold line. This exercise will be built upon in Exercise 6.
 
 Congrats on making it your first bootcamp React project!
