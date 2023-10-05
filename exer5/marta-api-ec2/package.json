@@ -1,0 +1,12 @@
+{
+  "name": "marta-api-ec2",
+  "version": "1.0.0",
+  "description": "Server calling taken from marta-interface solution, connect to ec2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Long Lam, Zini Chakraborty",
+  "license": "ISC"
+}
