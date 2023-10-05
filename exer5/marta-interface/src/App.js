@@ -10,7 +10,7 @@ const fetcher = async (url) => {
 }
 
 function App() {
-  const { data, error, isLoading, isValidating } = useSWR("http://localhost:3001/arrivals/gold", fetcher)
+  const { data, error, isLoading, isValidating } = useSWR("http://13.59.196.129:3001/arrivals/gold", fetcher)
   if (isLoading) return <div>Loading</div>
   if (!isValidating) {
     console.log(data)

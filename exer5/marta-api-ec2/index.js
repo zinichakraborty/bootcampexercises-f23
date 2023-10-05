@@ -1,9 +1,13 @@
 import express from "express";
 import axios from "axios";
 import https from "https";
+import cors from "cors"
 
 const server = express();
 const PORT = 3001;
+
+// Enable CORS
+server.use(cors())
 
 server.listen(PORT, (err) => {
     if (err) {
