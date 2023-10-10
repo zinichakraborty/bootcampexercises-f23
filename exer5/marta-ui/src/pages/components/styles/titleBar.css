@@ -1,0 +1,9 @@
+.titleBar {
+    font-family: 'Bebas Neue';
+    font-size: 400%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.5em;
+    box-shadow: 4px 0 4px grey;
+}

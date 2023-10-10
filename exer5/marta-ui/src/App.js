@@ -1,11 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
-import data from './train-data'
+import GoldLine from './pages/goldLine';
 
 function App() {
   return (
     <div className="App">
-      <p>{data.RailArrivals[0].DESTINATION}</p>
+      <GoldLine />
     </div>
   );
 }
