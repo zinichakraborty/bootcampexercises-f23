@@ -33,25 +33,25 @@ export default Gold;
 
 Since we have not learned how to use routers yet, to access each page we will add a simple link for each page inside the divider in `App.js` titled by their line.
 
-Next, drag the `train-data.js` and `stations.js` file that is in exer 5 into the `server` folder. We are using static data for now because updating what appears on screen in React using remote data requires using hooks which we will learn after this exercise has been released. The data is formatted identically to the MARTA API's data a (because it was copied from there), so it organized in a way that when called it returns an object that holds an array of train objects which consist of each train's data, so {[Train1's data, Train2's data, Train3's data , ...]}. Since each line has its own page, the called data should be filtered to only return info for trains that are part of the specific line. For example, for the gold line we only want an array of gold trains (i.e. only include objects with the property `"LINE":"GOLD"`).
+Next, drag the `train-data.js` and `station-data.js` file that is in exer 5 into the `server` folder. We are using static data for now because updating what appears on screen in React using remote data requires using hooks which we will learn after this exercise has been released. The data is formatted identically to the MARTA API's data a (because it was copied from there), so it organized in a way that when called it returns an object that holds an array of train objects which consist of each train's data, so {[Train1's data, Train2's data, Train3's data , ...]}. Since each line has its own page, the called data should be filtered to only return info for trains that are part of the specific line. For example, for the gold line we only want an array of gold trains (i.e. only include objects with the property `"LINE":"GOLD"`).
 
 In the components folder, create a `Train.js` file. In this file you can create the design for an exportable Train component that takes in the data for one train and returns the display for it, follow the Figma page below for an aesthetic design of a train component or come up with your own design including the same information!
 
-For each *line* page, display each of the train components for their line. *Hint: You do not need to display each component manually as the number of trains in a line or subject to change.* Instead you can use the `map` and `spread` function you learned in Exercise 4 inside the App component to take in the props at each index and display a component for each train's props.
+For each *line* page, display each of the train components for their line (first make sure to import the Train component into the file). *Hint: You do not need to display each component manually as the number of trains in a line or subject to change.* Instead you can use the `map` and `spread` function you learned in Exercise 4 inside the App component to take in the props at each index and display a component for each train's props.
 
 Once you have reached this step, we will start the setup for Exercise 6. We ask that you create a non-functional navbar somewhere on the screen. (In Exercise 6 we will display information for each train line so the dropdown for each train line page will change).
 
-We can create a `navbar.js` file in `components`. This will contain an exportable navbar display component, which we can import into each page. The `stations.js` file holds the stations for each line as an object with arrays associated with lines. For each page, the navbar component will be displayed with the props for their specific train, called from `stations.js`. For example, for the gold line we only want the gold stations, so we want `stations.gold`.
+We can create a `navbar.js` file in `components`. This will contain an exportable navbar display component, which we can import into each page. The `station-data.js` file holds the stations for each line as an object with arrays associated with lines. For each page, the navbar component will be displayed with the props for their specific train, called from `station-data.js`. For example, for the gold line we only want the gold stations, so we want `station-data.gold`.
 
 Lastly, we want four nonfunctional buttons to be displayed titled 'Arriving', 'Scheduled', 'Northbound', and 'Southbound' in each of the pages. For the green and blue line, use 'Eastbound' and 'Westbound' instead. These buttons will become operational in Exercise 6.
 
 **Requirements:**
 - In `src` create three folders: `pages`, `server` and `components`.
-- Call the static train.js file to get train data filtered by line
-- Create a `Train.js` component inside the `components` folder that displays the information for each train 
-- In `App.js`, add simple links to four pages titled 
-- For each line page, display all trains' datas by feeding each entry in the filtered array into the `Train.js` component, so each train's data appears in the component's format.``
-- Include a nonfunctional navbar that lists 
+- Call the static `train-data.js` file to get train data filtered by line.
+- Create a `Train.js` component inside the `components` folder that displays the information for each train.
+- In `App.js`, add simple links to four pages titled `red.js`, `gold.js`, `blue.js`, and `green.js`.
+- For each line's page, display each trains' data by feeding each entry in the filtered array into the `Train.js` component as props.
+- Include a nonfunctional navbar that calls the `station-data.js` file for each line to get the specific stations.
 - Add four nonfunctional buttons titled 'Arriving', 'Scheduled', and 'Northbound'/'Southbound' or  'Eastbound'/'Westbound' depending on the line for each page.
 
 **Figma Pages:**
