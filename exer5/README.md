@@ -23,7 +23,7 @@ To get started, create a `pages`, `server`, and `components` folder within `src`
 function Gold() {
   return (
     <div>
-      ///YOUR CODE
+      //YOUR CODE
     </div>
   );
 }
