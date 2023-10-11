@@ -1,10 +1,16 @@
 import './App.css';
-import GoldLine from './pages/goldLine';
+import Gold from './pages/gold'
+import Red from './pages/red'
+import Green from './pages/green'
+import Blue from './pages/blue'
 
 function App() {
   return (
     <div className="App">
-      <GoldLine />
+      <Gold />
+      <Red />
+      <Green />
+      <Blue />
     </div>
   );
 }

@@ -2,8 +2,8 @@ import "./styles/filterButtons.css";
 import "@fontsource/open-sans";
 
 
-export default function filterButtons() {
-    const buttons = ["Arriving", "Scheduled", "Northbound", "Southbound"];
+export default function filterButtons(props) {
+    const { buttons } = props;
     return (
         <div className="filterButtons">
             {
