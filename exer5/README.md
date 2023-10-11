@@ -31,7 +31,7 @@ function Gold() {
 export default Gold;
 ```
 
-Since we have not learned how to use routers yet, to access each page we will add a simple link for each page inside the divider in `App.js` titled by their line.
+Since we have not learned how to use routers yet, import each page into `App.js` and just display each one sequentially below each other.
 
 Next, drag the `train-data.js` and `station-data.js` file that is in exer 5 into the `server` folder. We are using static data for now because updating what appears on screen in React using remote data requires using hooks which we will learn after this exercise has been released. The data is formatted identically to the MARTA API's data a (because it was copied from there), so it organized in a way that when called it returns an object that holds an array of train objects which consist of each train's data, so {[Train1's data, Train2's data, Train3's data , ...]}. Since each line has its own page, the called data should be filtered to only return info for trains that are part of the specific line. For example, for the gold line we only want an array of gold trains (i.e. only include objects with the property `"LINE":"GOLD"`).
 
@@ -49,7 +49,7 @@ Lastly, we want four nonfunctional buttons to be displayed titled 'Arriving', 'S
 - In `src` create three folders: `pages`, `server`, and `components`.
 - Call the static `train-data.js` file to get train data filtered by line.
 - Create a `Train.js` component inside the `components` folder that displays the information for each train.
-- In `App.js`, add simple links to four pages titled `red.js`, `gold.js`, `blue.js`, and `green.js`.
+- In `App.js`, display the code in `red.js`, `gold.js`, `blue.js`, and `green.js` under each other.
 - For each line's page, display each train's data by feeding each entry in the filtered array into the `Train.js` component as props.
 - Include a nonfunctional navbar that calls the `station-data.js` file for each line to get the specific stations.
 - Add four nonfunctional buttons titled 'Arriving', 'Scheduled', and 'Northbound'/'Southbound' or  'Eastbound'/'Westbound' depending on the line for each page.
