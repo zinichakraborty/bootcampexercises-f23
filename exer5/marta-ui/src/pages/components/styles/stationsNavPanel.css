@@ -19,7 +19,7 @@
 
 .panelHeadingContent {
     font-weight: 500;
-    font-size: 13px;
+    font-size: 14px;
     color: #AC9D9D;
 }
 
@@ -37,7 +37,7 @@
     float: left;
     justify-items: flex-start;
     font-family: "Open Sans";
-    min-width: 16em;
+    min-width: 15em;
     background-color: #231F20;
     border: none;
     margin-top: 10px;
