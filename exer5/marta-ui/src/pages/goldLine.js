@@ -13,6 +13,7 @@ export default function GoldLine() {
         <div className="goldLine">
             <TitleBar titleLine={line.toUpperCase()} />
             <Dashboard trains={goldArrivals} stations={goldStations} />
+            
         </div>
     )
 }
