@@ -3,6 +3,11 @@
     flex-direction: row;
 }
 
-.panelHeading {
-    color: white;
+.dashboard-body {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 78%;
+    flex-grow: 1;
 }
+
+.filterButtons {}

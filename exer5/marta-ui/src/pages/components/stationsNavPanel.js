@@ -1,4 +1,5 @@
 import "./styles/stationsNavPanel.css"
+import "@fontsource/open-sans";
 
 export default function stationsNavPanel(props) {
     const { stations } = props;
@@ -12,7 +13,7 @@ export default function stationsNavPanel(props) {
             </div>
             <div className="stationsOptions">
                 {stations.map((station) => {
-                    return <li><p className="stationsOptionsContent">{station}</p></li>
+                    return <li><button className="stationsOptionsContent" onClick={() => alert(station)}><span>{station}</span></button></li>
                 })}
             </div>
         </div>
