@@ -6,7 +6,7 @@ export default function Dashboard(props) {
     return (
         <div className="dashboard">
             <StationsNavPanel stations={stations} />
-            <h1>Test</h1>
+            <p>Test</p>
         </div>
     )
 }
