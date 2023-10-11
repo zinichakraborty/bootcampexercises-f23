@@ -6,7 +6,7 @@
     align-items: stretch;
     position: sticky;
     min-height: 100vh;
-    flex-basis: 14em;
+    flex-basis: 16em;
     flex-grow: 1;
 }
 
@@ -37,7 +37,7 @@
     float: left;
     justify-items: flex-start;
     font-family: "Open Sans";
-    min-width: 15em;
+    min-width: 16em;
     background-color: #231F20;
     border: none;
     margin-top: 10px;
