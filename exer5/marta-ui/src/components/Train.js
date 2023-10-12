@@ -8,7 +8,7 @@ export default function Train(props) {
         <div className="Train">
             <img src={m} />
             <div className="middle">
-                <p1>{STATION} to {DESTINATION}</p1>
+                <p1>{STATION} {"-->"} {DESTINATION}</p1>
                 <div className="bottom-middle">
                     <p3 className={(LINE === 'GOLD') ? "gold" :  (LINE === 'RED') ? "red" : (LINE === 'GREEN') ? "green" : "blue"}>{LINE}</p3>
                     <p4 className={(DELAY === 'T0S') ? "greentime" : "redtime" }>{time}</p4>
