@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin-top: 10px;
 }
 
 button {
@@ -12,29 +13,32 @@ button {
   text-align: center;
   width: 10em;
   background-color: white;
-  border-radius: 7px;
   border-width: 1px;
   border-color: black;
   transition-duration: 0.4s;
 }
 
 button:hover {
-  background-color: black;
+  background-color: gray;
   color: white;
 }
 
 .gold-button {
   background-color: gold;
+  color: white;
 }
 
 .red-button {
   background-color: red;
+  color: white;
 }
 
 .blue-button {
   background-color: blue;
+  color: white;
 }
 
 .green-button {
   background-color: green;
+  color: white;
 }
