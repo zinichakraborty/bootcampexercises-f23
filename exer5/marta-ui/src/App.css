@@ -1,3 +1,40 @@
 .App {
   text-align: center;
 }
+
+button {
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 14px;
+  font-family: "Open Sans";
+  font-weight: 600;
+  padding: 0.25em;
+  text-align: center;
+  width: 10em;
+  background-color: white;
+  border-radius: 7px;
+  border-width: 1px;
+  border-color: black;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+.gold-button {
+  background-color: gold;
+}
+
+.red-button {
+  background-color: red;
+}
+
+.blue-button {
+  background-color: blue;
+}
+
+.green-button {
+  background-color: green;
+}
