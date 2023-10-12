@@ -15,6 +15,7 @@
 img {
     width: 50px;
     height: auto;
+    margin-left: 10px;
 }
 
 .middle {
@@ -30,9 +31,39 @@ img {
 }
 
 p2 {
-    color: red;
+    color: green;
 }
 
 p3 {
-    color: black;
+    color: white;
+    padding: 2px;
+    border-radius: 10%;
+}
+
+p4 {
+    color: black
+}
+
+.greentime {
+    color: green;
+}
+
+.redtime {
+    color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+
+.gold {
+    background-color: gold;
+}
+
+.blue {
+    background-color: blue;
 }

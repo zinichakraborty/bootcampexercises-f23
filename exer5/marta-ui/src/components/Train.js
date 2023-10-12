@@ -10,11 +10,11 @@ export default function Train(props) {
             <div className="middle">
                 <p1>{STATION} to {DESTINATION}</p1>
                 <div className="bottom-middle">
-                    <p3>{LINE}</p3>
-                    <p4>{WAITING_TIME}</p4>
+                    <p3 className={(LINE === 'GOLD') ? "gold" :  (LINE === 'RED') ? "red" : (LINE === 'GREEN') ? "green" : "blue"}>{LINE}</p3>
+                    <p4 className={(DELAY === 'T0S') ? "greentime" : "redtime" }>{time}</p4>
                 </div>
             </div>
-             <p2>{time}</p2>
+            <p2>{WAITING_TIME}</p2>
         </div>
     )
 }
