@@ -1,16 +1,13 @@
 import './App.css';
-import Gold from './pages/gold'
-import Red from './pages/red'
-import Green from './pages/green'
-import Blue from './pages/blue'
+import TrainLine from './pages/trainLine'
 
 function App() {
   return (
     <div className="App">
-      <Gold />
-      <Red />
-      <Green />
-      <Blue />
+      <TrainLine line={"gold"} buttons={["Arriving", "Scheduled", "Northbound", "Southbound"]} />
+      <TrainLine line={"red"} buttons={["Arriving", "Scheduled", "Northbound", "Southbound"]} />
+      <TrainLine line={"blue"} buttons={["Arriving", "Scheduled", "Eastbound", "Westbound"]} />
+      <TrainLine line={"green"} buttons={["Arriving", "Scheduled", "Eastbound", "Westbound"]} />
     </div>
   );
 }
