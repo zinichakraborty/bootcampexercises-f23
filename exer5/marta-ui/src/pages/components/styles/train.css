@@ -1,3 +1,38 @@
 .Train {
-    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 10px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    width: 100%;
+    height: 70px;
+    flex-direction: row;
+    gap: 2em;
+}
+
+img {
+    width: 50px;
+    height: auto;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom-middle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+}
+
+p2 {
+    color: red;
+}
+
+p3 {
+    color: gold;
 }
