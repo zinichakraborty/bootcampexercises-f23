@@ -1,0 +1,64 @@
+.stationsNavPanel {
+    background-color: #231F20;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: sticky;
+    min-height: 100vh;
+    flex-basis: 16em;
+    flex-grow: 1;
+}
+
+.panelHeading {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+
+.panelHeadingContent {
+    font-weight: 500;
+    font-size: 14px;
+    color: #AC9D9D;
+}
+
+.stationsOptions {
+    margin-right: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    list-style: none;
+    margin-bottom: 10%;
+}
+
+.stationsOptionsContent {
+    float: left;
+    justify-items: flex-start;
+    font-family: "Open Sans";
+    min-width: 16em;
+    background-color: #231F20;
+    border: none;
+    margin-top: 10px;
+    padding-left: 16%;
+    padding-bottom: 4%;
+    text-align: left;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
+    border-bottom: solid white;
+    border-width: 0.5px;
+    transition: all 0.5s;
+}
+
+.stationsOptionsContent span:after {
+    content: '\00bb';
+    opacity: 0;
+    transition: 0.5s;
+    float: right;
+}
+
+.stationsOptionsContent:hover span:after {
+    opacity: 1;
+}

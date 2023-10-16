@@ -1,0 +1,13 @@
+.dashboard {
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboard-body {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 78%;
+    flex-grow: 1;
+}
+
+.filterButtons {}
