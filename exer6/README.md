@@ -4,7 +4,7 @@
 In this exercise, bootcampers will familiarize themselves with state management and hooks.
 
 ## Submission
-See the submission instructions down below. 
+See the submission instructions down below.
 - **Due Date**: 10-19-2023
 
 ## Instructions
@@ -31,7 +31,7 @@ useEffect(() => {
       },[])
 ```
 
-THen, have the return block only return if(data), meaning if the data is not null. This way, we address the asynchronousness of fetching, so we only display once the data fully loads.
+Then, have the return block only return if(data), meaning if the data is not null. This way, we address the asynchronousness of fetching, so we only display once the data fully loads.
 
 Our navbar is now going to be operational! Make it so that when you click on a station in the navbar, it will become highlighted, and the trains displayed are filtered to display only those currently approaching that station, so for Doraville, we only want trains with `{"STATION": "DORAVILLE"}`.
 
