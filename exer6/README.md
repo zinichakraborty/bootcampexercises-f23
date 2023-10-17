@@ -48,9 +48,13 @@ We are going to make the buttons we created before operational. When a button is
 - Make the navbar functional so that the trains are filtered by one station at a time
 - Make the four buttons from Exercise 5 functional so that the trains are filtered by one or more buttons at a time
 
-##Display Examples
+##Actual Display Examples
+
 *Gold*
+
 <img width="500" alt="Screenshot 2023-10-16 at 10 08 13 PM" src="https://github.com/zinichakraborty/bootcampexercises-f23/assets/113480497/ab39f0c9-83d8-4232-90da-d026aca7ef7e">
+
 *Green*
+
 <img width="500" alt="Screenshot 2023-10-16 at 10 08 22 PM" src="https://github.com/zinichakraborty/bootcampexercises-f23/assets/113480497/990cb8e8-8441-4f05-bc1f-f9991bf977bb">
 
