@@ -21,17 +21,16 @@ First, import useState by adding `import React, { useState } from 'react';` to t
 
 We are no longer using static data! Instead, we are calling this URL: http://13.59.196.129:3001/. You can get the filtered trains for each line using this link by adding http://13.59.196.129:3001/arrivals/[line]; for example, to get the trains from the gold line, call http://13.59.196.129:3001/arrivals/gold. 
 
-*Important note:* Previously, we learned how to call from an API using fetch(); however, React can have issues with rendering using fetch as if the called data has not arrived yet but is being asked to be displayed there will be an issue. To handle this we will incorporate useEffect()! We will have two more states added to LinesPage.js: loading and data, currently set to true and null. Then, we will add useEffect() below like so (where the line is a variable that changes based on the current state of the line from the line buttons):
+*Important note:* Previously, we learned how to call from an API using fetch(); however, React can have issues with rendering using fetch as if the called data has not arrived yet but is being asked to be displayed there will be an issue. To handle this we will incorporate useEffect()! We will have two more states added to LinesPage.js: loading and data, currently set to true and null. Then, we will add useEffect() below like so (where the line in the URL is a variable that changes based on the current state of the line from the line buttons):
 
 ```
+//ADD MORE CODE TO ACCOUNT FOR LOADING
 useEffect(() => {
-        fetch("[URL](http://13.59.196.129:3001/arrivals/[line])")
+        fetch("[URL]")
         .then(response => response.json())
         .then(data => setData(data))
       },[])
 ```
-
-Then, have the return block only return if(data), meaning if the data is not null. This way, we address the asynchronousness of fetching, so we only display once the data fully loads.
 
 Our navbar is now going to be operational! Make it so that when you click on a station in the navbar, it will become highlighted, and the trains displayed are filtered to display only those currently approaching that station, so for Doraville, we only want trains with `{"STATION": "DORAVILLE"}`.
 
