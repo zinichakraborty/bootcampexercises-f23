@@ -91,12 +91,12 @@ PATCH /transferTicket
 PLEASE MAKE A 1-5 MIN DEMO VIDEO SHOWING EACH OF YOUR OPERATIONS TO THE DATABASE USING POSTMAN AND THROUGH ATLAS ITSELF!
 
 In this video:
--Create at least 2 users and show in MongoDB
--Create at least 3 tickets all assigned to the same user and show in MongoDB
--Delete one of those tickets and show in MongoDB
--Display the tickets for the user that all the tickets were assigned to in Postman
--Display the tickets for the user that has no tickets assigned to them in Postman
--Transfer a ticket from one user to a different user and show in MongoDB
+- Create at least 2 users and show in MongoDB
+- Create at least 3 tickets all assigned to the same user and show in MongoDB
+- Delete one of those tickets and show in MongoDB
+- Display the tickets for the user that all the tickets were assigned to in Postman
+- Display the tickets for the user that has no tickets assigned to them in Postman
+- Transfer a ticket from one user to a different user and show in MongoDB
 
 **Requirements:**
 - Create a User and Ticket model in `server/models`
