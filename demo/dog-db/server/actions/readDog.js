@@ -6,9 +6,9 @@ export default async function readDog(data) {
     await connectDB()
     try {
         const { identifier } = data
-        return await Dog.findById("6544133273daedac2cb3c2fd")
+        return await Dog.findById(identifier)
     } catch (e) {
         console.log(e)
-        return false
+        throw new Error("Unable to read dog. Invalid data")
     }
 }

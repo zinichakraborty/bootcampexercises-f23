@@ -6,9 +6,8 @@ export default async function deleteDog(data) {
     try {
         const { identifier } = data
         await Dog.findByIdAndDelete(identifier)
-        return true
     } catch (e) {
         console.log(e)
-        return false
+        throw new Error("Unable to delete dog. Invalid data")
     }
 }

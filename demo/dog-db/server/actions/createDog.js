@@ -6,9 +6,8 @@ export default async function createDog(dogData) {
     try {
         const dog = new Dog(dogData)
         await dog.save()
-        return true
     } catch (e) {
         console.log(e)
-        return false
+        throw new Error("Unable to create dog. Invalid data")
     }
 }
