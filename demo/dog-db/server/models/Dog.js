@@ -5,7 +5,7 @@ const dogSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    age:{
+    age: {
         type: Number,
         required: true
     },
@@ -15,4 +15,4 @@ const dogSchema = new mongoose.Schema({
     }
 })
 
-export default mongoose.model("Dog", dogSchema)
+export default mongoose.models?.Dog || mongoose.model("Dog", dogSchema)

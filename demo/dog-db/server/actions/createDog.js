@@ -1,11 +1,13 @@
 import connectDB from "../index.js"
 import Dog from "../models/Dog.js"
 
-export default async function createDog(identifier, res) {
+export default async function createDog(dogData) {
+    await connectDB()
     try {
-        await Dog.deleteOne(identifier)
+        const dog = new Dog(dogData)
+        await dog.save()
         return true
-    } catch(e) {
+    } catch (e) {
         console.log(e)
         return false
     }
