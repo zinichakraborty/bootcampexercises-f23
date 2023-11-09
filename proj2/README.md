@@ -11,6 +11,7 @@ There are a lot of "bonuses" included in the specifications in this project. We 
 
 ## Getting Started
 - Create **one** fork of this repository for your entire group, titled project2-f23-[groupname]
+- Set the owner of the repository to BoG-Dev-Bootcamp-F23
 - Each group member should clone the repository locally, and run `npm install` in the project folder
 - A boilerplate Next.js app has been provided, please organize the project similar to the structure introduced in [Lecture 14](https://docs.google.com/presentation/d/1OoYRQbqnWzqy7557_HipZqkyudbObbxbaCsidVrJZy8/edit?usp=sharing)
 - Create a `.env` file in the root for all your environment variables
