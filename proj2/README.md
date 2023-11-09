@@ -26,6 +26,7 @@ There are a lot of "bonuses" included in the specifications in this project. We 
 - It should allow a user to input their email and password and click a log in button
     - If the log in is successful (handled in backend verification), we are routed to the Training Logs Dashboard
     - If the log in is unsuccessful then there is some display to inform the user of the issue and remains on the log in page
+    - Refer to [Next.js documentation](https://nextjs.org/docs/pages/building-your-application/routing/linking-and-navigating) for how routing and navigation works in Next (it's mostly the same as React)
 - It also has a link to the Create Account Page in case the user does not have an account in page
 - **Important:** Make sure to track the user's id through hooks as your route to other pages
 
