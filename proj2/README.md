@@ -8,14 +8,10 @@ For this project, you will create a full stack animal training management app! Y
 - **Due: 11/14/2023**
 
 ### Setup
-- Create a Next App
-- Install React dependencies
-- In your Next app add a `server` folder and `middleware.js` file outside of `src`
-- In your `server` folder add a `mongodb` and `utils` folder
-- In your `mongodb` folder add a `models` and `actions` folder as well as an `index.js` file that connects to MongoDB
+- Create **one** fork of this repository for your entire group, titled project2-f23-[groupname]
+- Each group member should clone the repository locally, and run `npm install` in the project folder
+- A boilerplate Next.js app has been provided, please organize the project similar to the structure introduced in [Lecture 14](https://docs.google.com/presentation/d/1OoYRQbqnWzqy7557_HipZqkyudbObbxbaCsidVrJZy8/edit?usp=sharing)
 - Create a `.env` file outside of all folders that stores the information needed to connect to the database.
-- Going into `src` create a `componenents` folder outside of `pages`
-- If you plan to include styling (which hopefully you are) create a `styles` folder inside `src` for all styling pages.
 
 ### Tips
 - Remember to install dependencies as needed and run your application by doing `npm run dev`
