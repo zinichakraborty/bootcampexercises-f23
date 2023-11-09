@@ -73,23 +73,23 @@ Welcome to the final project of this year's dev bootcamp! For this project, you 
 - Create all endpoints in `src/pages/api`
 
 ### Create Operations
-- (1) Create a POST endpoint at `/api/user` to create a user in the database based on information passed into the body
-- (2) Create a POST endpoint at `/api/animal` to create an animal in the database based on information passed into the body
-- (3) Create a POST endpoint at `/api/training` to create a training log in the database based on information passed into the body
+- Create a POST endpoint at `/api/user` to create a user in the database based on information passed into the body
+- Create a POST endpoint at `/api/animal` to create an animal in the database based on information passed into the body
+- Create a POST endpoint at `/api/training` to create a training log in the database based on information passed into the body
 - Note these requests will have a similar request body and response statuses:
     - Body: A JSON containing the user/animal/training log information for the user/animal/training log we want to create
     - Response:
         - **Status 200 (Success):** If the body contains all of the information and is able to create the user/animal/training log
         - **Status 400:** If the body contains incorrect information
         - **Status 500:** For any other errors that occur
-- In the training log creation endpoint (3), we want to add in a check to ensure that the animal specified in the training log belongs to the user specified in the training log. Add in code to do this.
+- (Bonus) In the `POST api/training` endpoint, we want to add in a check to ensure that the animal specified in the training log belongs to the user specified in the training log. Add in code to do this.
     - Response:
         - **Status 400:** If the training log animal is not owned by specified user
 
 ### Update Operations
-- Create a PATCH endpoint at `/api/training` to edit the `description` or the `hours` of a training log.
+- Create a PATCH endpoint at `/api/training` to edit the info of a training log.
 - Create a PATCH endpoint at `/api/animal` to update the `hoursTrained` of an animal whenever a new training log is made or updated
-- (BONUS) Create a PATCH endpoint at `/api/user` to update the email of a user if you incorporate a profile page
+- (Bonus) Create a PATCH endpoint at `/api/user` to update the email of a user if you incorporate a profile page
 - Note these requests will have a similar request body and response statuses:
     - Body: A JSON containing the animal/training log id for the animal/training log we want to edit along with the information we want to update
     - Response:
@@ -113,12 +113,12 @@ Welcome to the final project of this year's dev bootcamp! For this project, you 
         - **Status 200 (Success):** If the user info is valid
         - **Status 500**: If the user ingo is not valid
 
-### (BONUS) Delete Operations
+### (Bonus) Delete Operations
 - Incorporate a way to delete users, animals, and training logs (which would cause animal `hoursTrained` to be decremented) and follow similar response formats as before for error handling.
 
-### (BONUS) Encryption
+### (Bonus) Encryption
 - Encrypt the user password when storing in the database via hashing (we recommend using the [bcrypt](https://www.npmjs.com/package/bcryptjs) library)
 - When we verify a user make sure to compare what is stored in the database with an encrypted version of the login password input.
 
-### (BONUS) JWT Authentication
+### (Bonus) JWT Authentication
 - Instead of tracking user info using a hook, incorporate JWT authentication and uses cookies to track user information.
