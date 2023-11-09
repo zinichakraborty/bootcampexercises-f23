@@ -19,7 +19,7 @@ Animal {
   breed: string // animal's breed
   owner: ObjectId // id of the animal's owner
   hoursTrained: number // total number of hours the animal has been trained for
-  profilePicture: string // just a Google image URL that can be displayed in an <img> tag
+  profilePicture: string // url to an image that can be displayed in an <img> tag
 }
 ```
 
