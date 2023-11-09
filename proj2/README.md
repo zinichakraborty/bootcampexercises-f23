@@ -69,9 +69,7 @@ There are a lot of "bonuses" included in the specifications in this project. We 
 - You will create three pages to display all users, training logs, and animals in the database regardless of user along with the sidebar and search bar components.
 
 ### Profile Page (bonus)
-- This page will simply display the user's full name, email, password, and whether or not the user is an admin.
-- You can incorporate storing a URL for a profile picture for the user.
-- You can also incorporate an input tag and button that allows you to update the user's email.
+- This page will simply display the user's full name, email, and whether or not the user is an admin.
 
 ## Backend Specifications
 - We will be incorporating all we have learned thus far such as API endpoints and database querying!
