@@ -3,7 +3,7 @@
 ## Description
 Welcome to the final project of this year's dev bootcamp! For this project, you will create a full stack animal training management app (this is a mini version of an app that BoG developed for Healing4Heroes). Your job is to develop a frontend and backend that interact with each other for deployment functionality to manage different users, animals, and training logs. Schemas for these data models can be found in `Schemas.md`.
 
-There are a lot of "bonuses" include in the specifications in this project. We recommend completing all other requirements first, and then working on getting through as many bonuses as you're able to. Bonuses aren't required, but provide extra credit opportunities.
+There are a lot of "bonuses" included in the specifications in this project. We recommend completing all other requirements first, and then working on getting through as many bonuses as you're able to. Bonuses aren't required, but provide extra credit opportunities.
 
 ## Submission
 - Present your final project during class on 11/30/2023
@@ -18,7 +18,7 @@ There are a lot of "bonuses" include in the specifications in this project. We r
 - Test the frontend through your browser, API via Postman
 
 ## Frontend Specifications
-- We will be incorporating all we have learned thus far such as CSS, componenets, hooks/state, conditional rendering, and routing!
+- We will be incorporating all we have learned thus far such as CSS, components, hooks/state, conditional rendering, and routing!
 
 ### Log In Page
 - This page will be the first page to display when running the application
@@ -60,7 +60,7 @@ There are a lot of "bonuses" include in the specifications in this project. We r
 - At the bottom it will display the current user's name and if the user is an admin or not as well as a link to log out (go to the log in page)
 
 ### Search Bar Component (bonus, not required)
-- This component is a simple search bar that either filters componenets when you click an enter button next to the search or as you type without using a button.
+- This component is a simple search bar that either filters components when you click an enter button next to the search or as you type without using a button.
 - For animal/user pages the search limits by the name of the animal/user and for training log pages the search limits by the title of the training log.
 
 ### Admin View Pages
