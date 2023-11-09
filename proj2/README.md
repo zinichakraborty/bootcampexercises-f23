@@ -25,7 +25,7 @@ There are a lot of "bonuses" included in the specifications in this project. We 
 - This page will be the first page to display when running the application
 - It should allow a user to input their email and password and click a log in button
     - If the log in is successful (handled in backend verification), we are routed to the Training Logs Dashboard
-    - If the log in is unsuccessful then there is some display to inform the user of the issue and remains on the log in page
+    - If the log in is unsuccessful then there is some error message (hint: use conditional rendering) to inform the user of the issue and remains on the log in page
     - Refer to [Next.js documentation](https://nextjs.org/docs/pages/building-your-application/routing/linking-and-navigating) for how routing and navigation works in Next (it's mostly the same as React)
 - It also has a link to the Create Account Page in case the user does not have an account in page
 - **Important:** Make sure to track the user's id through hooks as your route to other pages
@@ -34,7 +34,7 @@ There are a lot of "bonuses" included in the specifications in this project. We 
 - There will be four inputs on this page: Full Name, Email, Password, and Confirm Password
 - We will also have a checkbox for if the user is an Admin or not
 - There will be a clickable Sign Up button that once clicked:
-    - First compares Password and Confirm Password inputs and if they do not match notifies the user (hint: use conditional rendering) and keeps the user on the page
+    - First compares Password and Confirm Password inputs and if they do not match notifies the user and keeps the user on the page
     - Second handles creating a user using your backend code
         - If creating the user was successful then it routes to the Training Logs Dashboard
         - If creating the user was unsuccessful then there is some display to inform the user of the issue and remains on the create account page
