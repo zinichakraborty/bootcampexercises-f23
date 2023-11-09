@@ -47,7 +47,7 @@ There are a lot of "bonuses" included in the specifications in this project. We 
 - There is also a button that, when clicked, navigates to a form to create a training log that has inputs for title, description hours, and animal id only as the user id should already tracked with a hook and the date should just be the current date (for animal id you will have to manually input an animal id here).
     - If the creation is successful then it just goes back to the dashboard
     - If the creation is unsuccessful it stays on the form and notifies the user or the error
-- (BONUS) Include an option to edit existing training logs. This would involve navigating to a similar form as the training log creation form, except the form inputs are all prefilled with the current data
+- (Bonus) Include an option to edit existing training logs. This would involve navigating to a similar form as the training log creation form, except the form inputs are all prefilled with the current data
 
 ### Animals Dashboard
 - This page will have the sidebar and search bar components along with displaying all animals that the current user owns.
@@ -61,14 +61,14 @@ There are a lot of "bonuses" included in the specifications in this project. We 
 - If the current user is an admin it will also display links to the Admin View Pages.
 - At the bottom, it will display the current user's name and if the user is an admin or not as well as a link to log out (which navigates to the Log In page)
 
-### (BONUS) Search Bar Component
+### (Bonus) Search Bar Component
 - This component is a simple search bar that either filters components when you click an enter button next to the search or as you type without using a button.
 - For animal/user pages the search limits by the name of the animal/user and for training log pages the search limits by the title of the training log.
 
 ### Admin View Pages
 - You will create three pages to display all users, training logs, and animals in the database regardless of the user along with the sidebar and search bar components.
 
-### Profile Page (bonus)
+### (Bonus) Profile Page
 - This page will simply display the user's full name, email, and whether or not the user is an admin.
 
 ## Backend Specifications
@@ -92,7 +92,6 @@ There are a lot of "bonuses" included in the specifications in this project. We 
 ### Update Operations
 - Create a PATCH endpoint at `/api/animal` to update the `hoursTrained` of an animal whenever a new training log is made or updated
 - (Bonus) Create a PATCH endpoint at `/api/training` to edit the info of a training log.
-- (Bonus) Create a PATCH endpoint at `/api/user` to update the email of a user if you incorporate a profile page
 - Note these requests will have a similar request body and response statuses:
     - Body: A JSON containing the animal/training log id for the animal/training log we want to edit along with the information we want to update
     - Response:
