@@ -109,7 +109,7 @@ There are a lot of "bonuses" included in the specifications in this project. We 
     - Response:
         - **Status 200 (Success):** If we are able to retrieve the users/animals/training logs
         - **Status 500**: For any other errors
-    - **BONUS:** These three endpoints can implement pagination -- ideally using the document IDs or some other property that has natural ordering (i.e. take a look at approach 2 in this [article](https://www.codementor.io/@arpitbhayani/fast-and-efficient-pagination-in-mongodb-9095flbqr))
+    - (Bonus) These three endpoints can implement pagination -- ideally using the document IDs or some other property that has natural ordering (i.e. take a look at approach 2 in this [article](https://www.codementor.io/@arpitbhayani/fast-and-efficient-pagination-in-mongodb-9095flbqr))
 
 ### Verify User
 - Create a GET endpoint that determines if both the user's email and password exist in the database for log in.
