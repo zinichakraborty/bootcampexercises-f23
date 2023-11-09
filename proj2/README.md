@@ -61,14 +61,14 @@ There are a lot of "bonuses" included in the specifications in this project. We 
 - If the current user is an admin it will also display links to the Admin View Pages.
 - At the bottom it will display the current user's name and if the user is an admin or not as well as a link to log out (which navigates to the log in page)
 
-### Search Bar Component (bonus, not required)
+### Search Bar Component (bonus)
 - This component is a simple search bar that either filters components when you click an enter button next to the search or as you type without using a button.
 - For animal/user pages the search limits by the name of the animal/user and for training log pages the search limits by the title of the training log.
 
 ### Admin View Pages
 - You will create three pages to display all users, training logs, and animals in the database regardless of user along with the sidebar and search bar components.
 
-### Profile Page (bonus, not required)
+### Profile Page (bonus)
 - This page will simply display the user's full name, email, password, and whether or not the user is an admin.
 - You can incorporate storing a URL for a profile picture for the user.
 - You can also incorporate an input tag and button that allows you to update the user's email.
