@@ -46,14 +46,14 @@ For this project, you will create a full stack animal training management app! Y
 ### Training Logs Dashboard
 - This page will have the sidebar and search bar componenets along with displaying all training logs that the current user has for all of their animals.
 - Training Log Components display the title, date of the log, user's name, animal's name, animal's breed, hours logged, and the desciption of the log. They are ordered by date.
-- There is also a button that when clicked displays a form to create a training log (for animal id you will have to manually input an animal id here).
+- There is also a button that when clicked displays a form to create a training log that has inputs for title, description hours, and animal id only as user id should already tracked with a hook and the date should just be the current date (for animal id you will have to manually input an animal id here).
     - If the creation is succesful then it just goes back to the dashboard
     - If the creation is unsuccesful it stays on the form and notifies the user or the error
 
 ### Animals Dashboard
 - This page will have the sidebar and search bar componenets along with displaying all animals that the current user owns.
 - Animal componenets display an image of the animal from a Google image URL string, its name, breed, owner, and hours it has been trained thus far.
-- There is also a button that when clicked displays a form to create an animal.
+- There is also a button that when clicked displays a form to create an animal that has inputs for name, breed, hoursTrained, and a profile picture url only as user id should already tracked with a hook.
     - If the creation is succesful then it just goes back to the dashboard
     - If the creation is unsuccesful it stays on the form and notifies the user or the error
 
@@ -81,7 +81,7 @@ For this project, you will create a full stack animal training management app! Y
 ### Create Operations
 - Create a POST endpoint at `/api/user` to create a user in the database based on information passed into the body
 - Create a POST endpoint at `/api/animal` to create an animal in the database based on information passed into the body
-- Create a POST endpoint at `/api/training` to create a training log in the database based on information passed into the body (the date stored will be the date at the time of creation)
+- Create a POST endpoint at `/api/training` to create a training log in the database based on information passed into the body
 - Note these requests will have a similar request body and response statuses:
     - Body: A JSON containing the user/animal/training log information for the user/animal/training log we want to create
     - Response:
