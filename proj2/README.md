@@ -4,8 +4,8 @@
 For this project, you will create a full stack animal training management app! Your job for the app is to develop a frontend and backend that interact with each other for deployment functionality to manage different users, animals, and training logs. Schemas for these data models can be found in `Schemas.md`.
 
 ### Submission
-- Present your final project during lecture on 11/30/2023
-- **Due: 11/30/2023**
+- Present your final project during lecture on 11/14/2023
+- **Due: 11/14/2023**
 
 ### Setup
 - Create a Next App
