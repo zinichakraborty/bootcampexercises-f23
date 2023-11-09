@@ -3,11 +3,11 @@
 ## Description
 For this project, you will create a full stack animal training management app! Your job for the app is to develop a frontend and backend that interact with each other for deployment functionality to manage different users, animals, and training logs. Schemas for these data models can be found in `Schemas.md`.
 
-## Submission
+### Submission
 - Present your final project during lecture on 11/30/2023
 - **Due: 11/30/2023**
 
-## Setup
+### Setup
 - Create a Next App
 - Install React dependencies
 - In your Next app add a `server` folder and `middleware.js` file outside of `src`
@@ -16,7 +16,7 @@ For this project, you will create a full stack animal training management app! Y
 - Create a `.env` file outside of all folders that stores the information needed to connect to the database.
 - Going into `src` create a `componenents` folder outside of `pages`
 
-## Tips
+### Tips
 - Remember to install dependencies as needed and run your application by doing `npm run dev`
 - Testing the backend with Postman before connecting it to frontend will help with debugging
 
