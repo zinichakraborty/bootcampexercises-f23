@@ -117,7 +117,7 @@ Welcome to the final project of this year's dev bootcamp! For this project, you 
 - Incorporate a way to delete users, animals, and training logs (which would cause animal `hoursTrained` to be decremented) and follow similar response formats as before for error handling.
 
 ### (BONUS) Encryption
-- Encrypt the user password when storing in the database.
+- Encrypt the user password when storing in the database via hashing (we recommend using the [bcrypt](https://www.npmjs.com/package/bcryptjs) library)
 - When we verify a user make sure to compare what is stored in the database with an encrypted version of the login password input.
 
 ### (BONUS) JWT Authentication
