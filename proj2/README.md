@@ -28,7 +28,7 @@ There are a lot of "bonuses" included in the specifications in this project. We 
     - If the log in is unsuccessful then there is some error message (hint: use conditional rendering) to inform the user of the issue and remains on the log in page
     - Refer to [Next.js documentation](https://nextjs.org/docs/pages/building-your-application/routing/linking-and-navigating) for how routing and navigation works in Next (it's mostly the same as React)
 - It also has a link to the Create Account Page in case the user does not have an account in page
-- **Important:** Make sure to track the user's id through hooks as your route to other pages
+- **Important:** Make sure to track the user's id either through props or [custom hooks](https://react.dev/learn/reusing-logic-with-custom-hooks) (a more clean way to do it) as you route to other pages
 
 ### Create Account Page
 - There will be four inputs on this page: Full Name, Email, Password, and Confirm Password
@@ -59,7 +59,7 @@ There are a lot of "bonuses" included in the specifications in this project. We 
 ### Sidebar Component
 - This component will hold links to the training log dashboard, animal dashboard, and profile page if implemented.
 - If the current user is an admin it will also display links to the Admin View Pages.
-- At the bottom it will display the current user's name and if the user is an admin or not as well as a link to log out (go to the log in page)
+- At the bottom it will display the current user's name and if the user is an admin or not as well as a link to log out (which navigates to the log in page)
 
 ### Search Bar Component (bonus, not required)
 - This component is a simple search bar that either filters components when you click an enter button next to the search or as you type without using a button.
