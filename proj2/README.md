@@ -3,6 +3,8 @@
 ## Description
 Welcome to the final project of this year's dev bootcamp! For this project, you will create a full stack animal training management app (this is a mini version of an app that BoG developed for Healing4Heroes). Your job is to develop a frontend and backend that interact with each other for deployment functionality to manage different users, animals, and training logs. Schemas for these data models can be found in `Schemas.md`.
 
+There are a lot of "bonuses" include in the specifications in this project. We recommend completing all other requirements first, and then working on getting through as many bonuses as you're able to. Bonuses aren't required, but provide extra credit opportunities.
+
 ## Submission
 - Present your final project during class on 11/30/2023
 - **Due: 11/30/2023**
@@ -43,6 +45,7 @@ Welcome to the final project of this year's dev bootcamp! For this project, you 
 - There is also a button that, when clicked, navigates to a form to create a training log that has inputs for title, description hours, and animal id only as user id should already tracked with a hook and the date should just be the current date (for animal id you will have to manually input an animal id here).
     - If the creation is succesful then it just goes back to the dashboard
     - If the creation is unsuccesful it stays on the form and notifies the user or the error
+- (Bonus) Include an option to edit existing training logs. This would involve navigating to a similar form as the training log creation form, except the form inputs are all prefilled with the current data
 
 ### Animals Dashboard
 - This page will have the sidebar and search bar components along with displaying all animals that the current user owns.
@@ -87,8 +90,8 @@ Welcome to the final project of this year's dev bootcamp! For this project, you 
         - **Status 400:** If the training log animal is not owned by specified user
 
 ### Update Operations
-- Create a PATCH endpoint at `/api/training` to edit the info of a training log.
 - Create a PATCH endpoint at `/api/animal` to update the `hoursTrained` of an animal whenever a new training log is made or updated
+- (Bonus) Create a PATCH endpoint at `/api/training` to edit the info of a training log.
 - (Bonus) Create a PATCH endpoint at `/api/user` to update the email of a user if you incorporate a profile page
 - Note these requests will have a similar request body and response statuses:
     - Body: A JSON containing the animal/training log id for the animal/training log we want to edit along with the information we want to update
