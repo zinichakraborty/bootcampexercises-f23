@@ -62,7 +62,7 @@ For this project, you will create a full stack animal training management app! Y
 - At the bottom it will display the current user's name and if the user is an admin or not as well as a link to log out (go to the log in page)
 
 ### Search Bar Component
-- This component is a simple search bar that either filters componenets when you click an enter button next to the search or (bonus) as you type without using a button.
+- This component is a simple search bar that either filters componenets when you click an enter button next to the search or (BONUS) as you type without using a button.
 - For animal/user pages the search limits by the name of the animal/user and for training log pages the search limits by the title of the training log.
 
 ### Admin View Pages
@@ -77,7 +77,7 @@ For this project, you will create a full stack animal training management app! Y
 - We will be incorporating all we have learned thus far such as API endpoints, database querying, and middleware!
 - Create all endpoints in `src/pages/api` and handle them in your `server` folder
 
-### CREATE OPERATIONS
+### Create Operations
 - Create a POST endpoint at `/api/user` to create a user in the database based on information passed into the body
 - Create a POST endpoint at `/api/animal` to create an animal in the database based on information passed into the body
 - Create a POST endpoint at `/api/training` to create a training log in the database based on information passed into the body (the date stored will be the date at the time of creation)
@@ -87,14 +87,14 @@ For this project, you will create a full stack animal training management app! Y
         - **Status 200 (Success):** If the body contains all of the information and is able to create the user/animal/training log
         - **Status 400:** If the body contains incorrect information
         - **Status 500:** For any other errors that occur
-- **Bonus:** In the training log creation endpoint (3), we want to add in a check to ensure that the animal specified in the training log belongs to the user specified in the training log. Add in code to do this.
+- **BONUS:** In the training log creation endpoint (3), we want to add in a check to ensure that the animal specified in the training log belongs to the user specified in the training log. Add in code to do this.
     - Response:
         - **Status 400:** If the training log animal is not owned by specified user
 
-### UPDATE OPERATIONS
+### Update Operations
 - Create a PATCH endpoint at `/api/training` to edit the `description` or the `hours` of a training log.
 - Create a PATCH endpoint at `/api/animal` to update the `hoursTrained` of an animal whenever a new training log is made or updated
-- (Bonus) Create a PATCH endpoint at `/api/user` to update the email of a user if you incorporate a profile page
+- (BONUS) Create a PATCH endpoint at `/api/user` to update the email of a user if you incorporate a profile page
 - Note these requests will have a similar request body and response statuses:
     - Body: A JSON containing the animal/training log id for the animal/training log we want to edit along with the information we want to update
     - Response:
@@ -102,7 +102,7 @@ For this project, you will create a full stack animal training management app! Y
         - **Status 400:** If the body contains incorrect information (i.e. an animal doesn't exist)
         - **Status 500:** For any other errors that occur
 
-### READ OPERATIONS
+### Read Operations
 - We want to add admin functionality to this backend API to allow the admins to view all the data in the database
     - Create a GET endpoint at `/api/admin/users` which will return all of the users in the database (not with their passwords)
     - Create a GET endpoint at `/api/admin/animals` which will return all of the animals in the database
@@ -110,13 +110,13 @@ For this project, you will create a full stack animal training management app! Y
     - Response:
         - **Status 200 (Success):** If we are able to retrieve the users/animals/training logs
         - **Status 500**: For any other errors
-    - **Bonus:** These three endpoints can implement pagination -- ideally using the document IDs or some other property that has natural ordering (i.e. take a look at approach 2 in this [article](https://www.codementor.io/@arpitbhayani/fast-and-efficient-pagination-in-mongodb-9095flbqr))
+    - **BONUS:** These three endpoints can implement pagination -- ideally using the document IDs or some other property that has natural ordering (i.e. take a look at approach 2 in this [article](https://www.codementor.io/@arpitbhayani/fast-and-efficient-pagination-in-mongodb-9095flbqr))
 
-### MIDDLEWARE
+### Middleware
 - We want to create a resuable middleware function that takes in an `allowedMethods` array of strings i.e. `['POST', 'GET', 'DELETE']` and a `method` string with the current method being used in the request. This function should check if `method` is in `allowedMethods`
 	- Response
 		- **Status 400**: If the request `method` is not in `allowedMethods`
 		- **return NextResponse.next()** - let the request through
 
-### (BONUS) DELETE OPERATIONS
+### (BONUS) Delete Operations
 - Incorporate a way to delete users, animals, and training logs (which would cause animal `hoursTrained` to be decremented) and follow similar response formats as before for error handling.
