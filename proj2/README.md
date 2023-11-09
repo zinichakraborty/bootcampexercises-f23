@@ -1,23 +1,21 @@
 # Project 2 - Animal Training App
 
 ## Description
-For this project, you will create a full stack animal training management app! Your job for the app is to develop a frontend and backend that interact with each other for deployment functionality to manage different users, animals, and training logs. Schemas for these data models can be found in `Schemas.md`.
+Welcome to the final project of this year's dev bootcamp! For this project, you will create a full stack animal training management app (this is a mini version of an app that BoG developed for Healing4Heroes). Your job is to develop a frontend and backend that interact with each other for deployment functionality to manage different users, animals, and training logs. Schemas for these data models can be found in `Schemas.md`.
 
-### Submission
-- Present your final project during lecture on 11/14/2023
-- **Due: 11/14/2023**
+## Submission
+- Present your final project during class on 11/30/2023
+- **Due: 11/30/2023**
 
-### Setup
+## Getting Started
 - Create **one** fork of this repository for your entire group, titled project2-f23-[groupname]
 - Each group member should clone the repository locally, and run `npm install` in the project folder
 - A boilerplate Next.js app has been provided, please organize the project similar to the structure introduced in [Lecture 14](https://docs.google.com/presentation/d/1OoYRQbqnWzqy7557_HipZqkyudbObbxbaCsidVrJZy8/edit?usp=sharing)
-- Create a `.env` file outside of all folders that stores the information needed to connect to the database.
+- Create a `.env` file in the root for all your environment variables
+- Deploy the app locally via `npm run dev`, and navigate to `http://localhost:3000`
+- Test the frontend through your browser, API via Postman
 
-### Tips
-- Remember to install dependencies as needed and run your application by doing `npm run dev`
-- Testing the backend with Postman before connecting it to frontend will help with debugging
-
-## Frontend
+## Frontend Specifications
 - We will be incorporating all we have learned thus far such as CSS, componenets, hooks/state, conditional rendering, and routing!
 
 ### Log In Page
@@ -32,7 +30,7 @@ For this project, you will create a full stack animal training management app! Y
 - There will be four inputs on this page: Full Name, Email, Password, and Confirm Password
 - We will also have a checkbox for if the user is an Admin or not
 - There will be a clickable Sign Up button that once clicked:
-    - First compares Password and Confirm Password inputs and if they do not match notifies the user and keeps the user on the page
+    - First compares Password and Confirm Password inputs and if they do not match notifies the user (hint: use conditional rendering) and keeps the user on the page
     - Second handles creating a user using your backend code
         - If creating the user was succesful then it routes to the Training Logs Dashboard
         - If creating the user was unsuccesful then there is some display to inform the user of the issue and remains on the create account page
@@ -40,51 +38,51 @@ For this project, you will create a full stack animal training management app! Y
 - **Important:** Make sure to track the user's id through hooks as your route to other pages
 
 ### Training Logs Dashboard
-- This page will have the sidebar and search bar componenets along with displaying all training logs that the current user has for all of their animals.
+- This page will have the sidebar and search bar components along with displaying all training logs that the current user has for all of their animals.
 - Training Log Components display the title, date of the log, user's name, animal's name, animal's breed, hours logged, and the desciption of the log. They are ordered by date.
-- There is also a button that when clicked displays a form to create a training log that has inputs for title, description hours, and animal id only as user id should already tracked with a hook and the date should just be the current date (for animal id you will have to manually input an animal id here).
+- There is also a button that, when clicked, navigates to a form to create a training log that has inputs for title, description hours, and animal id only as user id should already tracked with a hook and the date should just be the current date (for animal id you will have to manually input an animal id here).
     - If the creation is succesful then it just goes back to the dashboard
     - If the creation is unsuccesful it stays on the form and notifies the user or the error
 
 ### Animals Dashboard
-- This page will have the sidebar and search bar componenets along with displaying all animals that the current user owns.
-- Animal componenets display an image of the animal from a Google image URL string, its name, breed, owner, and hours it has been trained thus far.
+- This page will have the sidebar and search bar components along with displaying all animals that the current user owns.
+- Animal components display an image of the animal from a Google image URL string, its name, breed, owner, and hours it has been trained thus far.
 - There is also a button that when clicked displays a form to create an animal that has inputs for name, breed, hoursTrained, and a profile picture url only as user id should already tracked with a hook.
     - If the creation is succesful then it just goes back to the dashboard
     - If the creation is unsuccesful it stays on the form and notifies the user or the error
 
-### SideBar Component
+### Sidebar Component
 - This componenent will hold links to the training log dashboard, animal dashbaord, and profile page if implemeneted.
 - If the current user is an admin it will also display links to the Admin View Pages.
 - At the bottom it will display the current user's name and if the user is an admin or not as well as a link to log out (go to the log in page)
 
-### Search Bar Component
-- This component is a simple search bar that either filters componenets when you click an enter button next to the search or (BONUS) as you type without using a button.
+### Search Bar Component (bonus, not required)
+- This component is a simple search bar that either filters componenets when you click an enter button next to the search or as you type without using a button.
 - For animal/user pages the search limits by the name of the animal/user and for training log pages the search limits by the title of the training log.
 
 ### Admin View Pages
 - You will create three pages to display all users, training logs, and animals in the database regardless of user along with the sidebar and search bar components.
 
-### (BONUS) Profile Page
+### Profile Page (bonus, not required)
 - This page will simply display the user's full name, email, password, and whether or not the user is an admin.
 - You can incorporate storing a URL for a profile picture for the user.
 - You can also incorporate an input tag and button that allows you to udpate the user's email.
 
-## Backend
-- We will be incorporating all we have learned thus far such as API endpoints, database querying, and middleware!
-- Create all endpoints in `src/pages/api` and handle them in your `server` folder
+## Backend Specifications
+- We will be incorporating all we have learned thus far such as API endpoints and database querying!
+- Create all endpoints in `src/pages/api`
 
 ### Create Operations
-- Create a POST endpoint at `/api/user` to create a user in the database based on information passed into the body
-- Create a POST endpoint at `/api/animal` to create an animal in the database based on information passed into the body
-- Create a POST endpoint at `/api/training` to create a training log in the database based on information passed into the body
+- (1) Create a POST endpoint at `/api/user` to create a user in the database based on information passed into the body
+- (2) Create a POST endpoint at `/api/animal` to create an animal in the database based on information passed into the body
+- (3) Create a POST endpoint at `/api/training` to create a training log in the database based on information passed into the body
 - Note these requests will have a similar request body and response statuses:
     - Body: A JSON containing the user/animal/training log information for the user/animal/training log we want to create
     - Response:
         - **Status 200 (Success):** If the body contains all of the information and is able to create the user/animal/training log
         - **Status 400:** If the body contains incorrect information
         - **Status 500:** For any other errors that occur
-- **BONUS:** In the training log creation endpoint (3), we want to add in a check to ensure that the animal specified in the training log belongs to the user specified in the training log. Add in code to do this.
+- In the training log creation endpoint (3), we want to add in a check to ensure that the animal specified in the training log belongs to the user specified in the training log. Add in code to do this.
     - Response:
         - **Status 400:** If the training log animal is not owned by specified user
 
@@ -114,12 +112,6 @@ For this project, you will create a full stack animal training management app! Y
     - Response:
         - **Status 200 (Success):** If the user info is valid
         - **Status 500**: If the user ingo is not valid
-
-### Middleware
-- We want to create a resuable middleware function that takes in an `allowedMethods` array of strings i.e. `['POST', 'GET', 'DELETE']` and a `method` string with the current method being used in the request. This function should check if `method` is in `allowedMethods`
-	- Response
-		- **Status 400**: If the request `method` is not in `allowedMethods`
-		- **return NextResponse.next()** - let the request through
 
 ### (BONUS) Delete Operations
 - Incorporate a way to delete users, animals, and training logs (which would cause animal `hoursTrained` to be decremented) and follow similar response formats as before for error handling.
