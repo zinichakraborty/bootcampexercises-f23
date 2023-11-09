@@ -15,6 +15,7 @@ For this project, you will create a full stack animal training management app! Y
 - In your `mongodb` folder add a `models` and `actions` folder as well as an `index.js` file that connects to MongoDB
 - Create a `.env` file outside of all folders that stores the information needed to connect to the database.
 - Going into `src` create a `componenents` folder outside of `pages`
+- If you plan to include styling (which hopefully you are) create a `styles` folder inside `src` for all styling pages.
 
 ### Tips
 - Remember to install dependencies as needed and run your application by doing `npm run dev`
@@ -26,10 +27,10 @@ For this project, you will create a full stack animal training management app! Y
 ### Log In Page
 - This page will be the first page to display when running the application
 - It should allow a user to input their email and password and click a log in button
-    - If the log in is succesful (handled in backend), we are routed to the Training Logs Dashboard
+    - If the log in is succesful (handled in backend verification), we are routed to the Training Logs Dashboard
     - If the log in is unsuccesful then there is some display to inform the user of the issue and remains on the log in page
 - It also has a link to the Create Account Page in case the user does not have an account in page
-- *Important:* Make sure to track the user's id through hooks as your route to other pages
+- **Important:** Make sure to track the user's id through hooks as your route to other pages
 
 ### Create Account Page
 - There will be four inputs on this page: Full Name, Email, Password, and Confirm Password
@@ -40,12 +41,12 @@ For this project, you will create a full stack animal training management app! Y
         - If creating the user was succesful then it routes to the Training Logs Dashboard
         - If creating the user was unsuccesful then there is some display to inform the user of the issue and remains on the create account page
 - Below the button there will also be a link to the Log In Page in case the user has already made an account
-- *Important:* Make sure to track the user's id through hooks as your route to other pages
+- **Important:** Make sure to track the user's id through hooks as your route to other pages
 
 ### Training Logs Dashboard
 - This page will have the sidebar and search bar componenets along with displaying all training logs that the current user has for all of their animals.
 - Training Log Components display the title, date of the log, user's name, animal's name, animal's breed, hours logged, and the desciption of the log. They are ordered by date.
-- There is also a button that when clicked displays a form to create a training log.
+- There is also a button that when clicked displays a form to create a training log (for animal id you will have to manually input an animal id here).
     - If the creation is succesful then it just goes back to the dashboard
     - If the creation is unsuccesful it stays on the form and notifies the user or the error
 
@@ -112,6 +113,12 @@ For this project, you will create a full stack animal training management app! Y
         - **Status 500**: For any other errors
     - **BONUS:** These three endpoints can implement pagination -- ideally using the document IDs or some other property that has natural ordering (i.e. take a look at approach 2 in this [article](https://www.codementor.io/@arpitbhayani/fast-and-efficient-pagination-in-mongodb-9095flbqr))
 
+### Verify User
+- Create a GET endpoint that determines if both the user's email and password exist in the database for log in.
+    - Response:
+        - **Status 200 (Success):** If the user info is valid
+        - **Status 500**: If the user ingo is not valid
+
 ### Middleware
 - We want to create a resuable middleware function that takes in an `allowedMethods` array of strings i.e. `['POST', 'GET', 'DELETE']` and a `method` string with the current method being used in the request. This function should check if `method` is in `allowedMethods`
 	- Response
@@ -120,3 +127,10 @@ For this project, you will create a full stack animal training management app! Y
 
 ### (BONUS) Delete Operations
 - Incorporate a way to delete users, animals, and training logs (which would cause animal `hoursTrained` to be decremented) and follow similar response formats as before for error handling.
+
+### (BONUS) Encryption
+- Encrypt the user password when storing in the database.
+- When we verify a user make sure to compare what is stored in the database with an encrypted version of the login password input.
+
+### (BONUS) JWT Authentication
+- Instead of tracking user info using a hook, incorporate JWT authentication and uses cookies to track user information.
