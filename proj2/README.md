@@ -39,7 +39,7 @@ There are a lot of "bonuses" included in the specifications in this project. We 
         - If creating the user was successful then it routes to the Training Logs Dashboard
         - If creating the user was unsuccessful then there is some display to inform the user of the issue and remains on the create account page
 - Below the button there will also be a link to the Log In Page in case the user has already made an account
-- **Important:** Make sure to track the user's id through hooks as your route to other pages
+- **Important:** Make sure to track the user's id either through props or [custom hooks](https://react.dev/learn/reusing-logic-with-custom-hooks) (a more clean way to do it) as you route to other pages
 
 ### Training Logs Dashboard
 - This page will have the sidebar and search bar components along with displaying all training logs that the current user has for all of their animals.
